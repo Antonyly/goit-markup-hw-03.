@@ -248,6 +248,11 @@ img {
 .team-section {
   background-color: #f5f4fa;
 }
+.subtitle-list-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .subtitle-list {
   display: flex;
   flex-direction: row;
@@ -275,6 +280,7 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
 }
 .subtitle-text {
   margin-bottom: 10px;
