@@ -29,6 +29,7 @@ ol {
 img {
   display: block;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -68,9 +69,13 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 /* ========= End Components ========= */
 /* ========= Start Header ========= */
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: 1px solid #ececec;
 }
 .header-container {
@@ -95,6 +100,10 @@ img {
   display: flex;
   flex-direction: row;
 }
+.header-icon {
+  margin-right: 10px;
+}
+
 .nav-list-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -118,26 +127,35 @@ img {
 }
 .main-conacts {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
   margin-left: auto;
 }
 .contact-number {
   margin-left: 0;
   justify-content: flex-end;
+  align-items: center;
 }
 .contact-mail {
   margin-left: 50px;
 }
+
 .contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color-light);
+  fill: #757575;
 }
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /* ========= End Header ========= */
 /* ========= Start Hero ========= */
@@ -146,11 +164,30 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+.hero-bg {
+  margin-right: auto;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-size: 1600px;
+  background-position: absolute;
+  width: 1600px;
+  min-height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/team.jpg);
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1600px;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-title {
   margin-bottom: 30px;
@@ -203,6 +240,17 @@ img {
 .obligation-list-item:not(:first-child) {
   margin-left: 30px;
 }
+.icon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .caption {
   display: flex;
   justify-content: center;
@@ -265,12 +313,8 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color-dark);
 }
-/* .subtitle-photo {
-  margin-bottom: 30px;
-} */
+
 .container-title {
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
   padding: 30px 0;
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
@@ -285,6 +329,7 @@ img {
   color: var(--primary-text-color-dark);
 }
 .subtitle-test-desk {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -292,8 +337,76 @@ img {
   letter-spacing: 0.03em;
   color: var(--primary-text-color-light);
 }
+.team-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+  border-radius: 50%;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  fill: white;
+  background-color: #188ce8;
+}
+
 /* ========= End Team ========= */
+
+/* ========= Start Clients ========= */
+.list-clients {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color-dark);
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  fill: #afb1b8;
+  border-radius: 4px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: #2196f3;
+  border: 1px solid #2196f3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+/* ========= End clients ========= */
+
 /* ========= Start Footer ========= */
+.section-footer {
+  display: flex;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 
 .footer {
   padding-top: 60px;
@@ -347,6 +460,40 @@ img {
 .footer-list-link:focus {
   color: var(--accent-color);
 }
+
+.second-container {
+  margin-left: 70px;
+}
+.second-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.second-list {
+  display: flex;
+}
+.second-list-item:not(:first-child) {
+  margin-left: 10px;
+}
+.list-item-link {
+  fill: var(--secondary-text-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.list-item-link:hover,
+.list-item-link:focus {
+  background: var(--accent-color);
+}
 /* ========= End Footer ========= */
 /* ========= Portfolio Html ========= */
 .main-section {
@@ -367,7 +514,7 @@ img {
 }
 .portfolio-btn {
   min-height: 40px;
-  padding: 4px 12px;
+  padding: 6px 22px;
   border: 0;
   border-radius: 4px;
   font-family: inherit;
@@ -390,16 +537,9 @@ img {
 .main-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
 }
-.main-list-item {
-  flex-basis: calc((100% - 90px) / 3);
-  margin-top: 30px;
-  margin-left: 30px;
-}
+
 .overtitle {
-  display: block;
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -418,4 +558,22 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-light);
+}
+.main-links {
+  flex-basis: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-links:nth-child(3n) {
+  margin-right: 0;
+}
+.main-links:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+.main-links:hover,
+.main-links:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
